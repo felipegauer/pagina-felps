@@ -24,6 +24,10 @@ body{
 
 }
 
+.gallery-tittle h1{
+    color: #6c584c;
+}
+
 #gallery{
     position: absolute;
     height: 150vh;
