@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: black;
+    overflow: auto;
+    overflow-x: hidden;
+    font-family: "Spline Sans Mono", monospace;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#blob{
+    position:absolute;
+    background-color: #fff;
+    height: 200px;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: -3;
+    filter: blur(5.5rem);
+
+    background: linear-gradient(
+        to right,
+        aquamarine,
+        rgb(124, 65, 243)
+    );
+
+    transition: all 1.5s ease;
+    animation: rotate 15s infinite;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.word{
+    display: inline;
+    color: #fff;
+    font-size: 4rem;
+    font-family: "Spline Sans Mono", monospace;
+    cursor: default;
+    /* letter-spacing: 3px; */
+    max-width: 500px;
+    text-align: center;
+    opacity: 0;
+    transition: all 1.5s ease;
+    filter: blur(1px);
+    transform: translateX(-100%);
+    font-weight: bold;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.content:has(.fancy:hover) .word:not(.fancy:hover){
+    opacity: 0.2;
+}
+
+body:has(.fancy:hover) .blob{
+    opacity: 0.2;
+}
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    
+}
+@keyframes rotate {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
