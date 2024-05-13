@@ -20,18 +20,20 @@ body{
     top: 50%;
     transform: translate(-50%,-50%);
     color: black;
+    width: 100%;
+    text-align: center;
 
 
 }
 
-.gallery-tittle h1{
+.words{
     color: #6c584c;
 }
 
 #gallery{
     position: absolute;
-    height: 150vh;
-    width: 150vw;
+    height: 150%;
+    width: 150%;
     background-color: transparent;
 }
 .photo{
@@ -64,25 +66,31 @@ body{
 }
 
 .photo:nth-child(2){
+    width: 200px;
+    height: 350px;
     left:75%;
     top: 10%;
     background-color: #ee9b00;
 }
 
 .photo:nth-child(3){
+    width: 230px;
+    height: 250px;
     left:25%;
     top: 70%;
     background-color: #bb3e03;
 }
 
 .photo:nth-child(4){
+    width: 220px;
+    height: 290px;
     left:30%;
-    top: 25%;
+    top: 10%;
     background-color: #ca6702;
 }
 
 .photo:nth-child(5){
-    width: 250px;
+    width: 280px;
     height: 200px;
     left:10%;
     top: 50%;
@@ -92,13 +100,17 @@ body{
 }
 
 .photo:nth-child(6){
-    left:65%;
-    top: 80%;
+    width: 200px;
+    height: 280px;
+    left:55%;
+    top: 75%;
     background-color: #5e60ce;
     
 }
 
 .photo:nth-child(7){
+    width: 200px;
+    height: 220px;
     left:2%;
     top: 80%;
     background-color: #ee9b00;
@@ -106,7 +118,7 @@ body{
 }
 
 .photo:nth-child(8){
-    width: 250px;
+    width: 280px;
     height: 200px;
     left:55%;
     top: 5%;
@@ -114,26 +126,32 @@ body{
 }
 
 .photo:nth-child(9){
+    width: 250px;
+    height: 300px;
     left:85%;
-    top: 40%;
+    top: 45%;
     background-color: #ca6702;
 }
 
 .photo:nth-child(10){
+    width: 220px;
+    height: 275px;
     left:5%;
     top: 10%;
     background-color: #4cc9f0;
 }
 
 .photo:nth-child(11){
-    width: 250px;
-    height: 200px;
-    left:90%;
+    width: 300px;
+    height: 250px;
+    left:87%;
     top: 75%;
     background-color: #005f73;
 }
 
 .photo:nth-child(12){
+    width: 200px;
+    height: 250px;
     left:65%;
     top: 48%;
     background-color: #4cc9f0;
@@ -146,4 +164,19 @@ body{
 img:hover{
     transform: scale(1.02);
     opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+.photo{
+    transform: scale(0.6);
+}
+
+.photo:hover{
+    transform: scale(0.7);
+}
+
+/* img:hover{
+    transform: scale(0.7);
+    opacity: 1;
+} */
 }
