@@ -66,12 +66,13 @@ const hiddenElements = document.querySelectorAll(".word");
 hiddenElements.forEach((ele) => observer.observe(ele));
 
 menuBtn.addEventListener('click', () => {
+
     menuBtn.animate({
         opacity: 0,
         rotate: "-180deg"
     },
         {
-            duration:200,
+            duration:350,
             fill:"forwards",
             easing:"ease"
     });
@@ -80,7 +81,7 @@ menuBtn.addEventListener('click', () => {
         transform: "translate(0)"
     },
     {
-        duration:350,
+        duration:500,
         fill:"forwards",
         easing:"ease"
     })
