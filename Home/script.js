@@ -65,6 +65,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".word");
 hiddenElements.forEach((ele) => observer.observe(ele));
 
+
+
 menuBtn.addEventListener('click', () => {
 
     menuBtn.animate({
@@ -84,7 +86,8 @@ menuBtn.addEventListener('click', () => {
         duration:500,
         fill:"forwards",
         easing:"ease"
-    })
+    });
+    
 });
 
 closeBtn.addEventListener('click', ()=>{

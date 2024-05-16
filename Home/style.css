@@ -46,6 +46,7 @@ body::-webkit-scrollbar {
     padding: 10px 20px;
     z-index: 5;
     transform: translate(-100%);
+    font-weight: 450;
 }
 
 ul{
